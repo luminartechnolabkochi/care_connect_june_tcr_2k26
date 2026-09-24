@@ -1,8 +1,24 @@
 #================DOCTORS================
 
 #Api for listing all doctors
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
 
 #Api for adding doctor
+###
+POST  http://127.0.0.1:8000/doctors/
+Content-Type: application/json
+
+{
+    "name":"georgemathew",
+    "specialization":"urology",
+    "fee":5000,
+    "qualification":"mbbs",
+    "email":"georgemathew@gmail.com"
+
+}
 
 # Api for fetching doctor detail
 
