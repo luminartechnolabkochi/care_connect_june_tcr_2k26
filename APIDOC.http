@@ -28,4 +28,58 @@ Content-Type: application/json
 
 # doctors filter
 
-#=================Appointments===========
+#v2 endpoints
+
+#Api for listing all doctors
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+Authorization: Basic admin:admin
+
+#Api for adding doctor
+###
+POST  http://127.0.0.1:8000/v2/doctors/
+Content-Type: application/json
+Authorization: Basic admin:admin
+
+{
+    "name":"tg antony",
+    "specialization":"urology",
+    "fee":500,
+    "qualification":"mbbs",
+    "email":"t@gmail.com"
+   
+
+}
+
+#api call for fetching doctor detail
+###
+GET http://127.0.0.1:8000/v2/doctors/2/
+Accept: application/json
+
+
+#api call for update
+###
+PUT  http://127.0.0.1:8000/v2/doctors/2/
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "sreekumar thekoot",
+  "specialization": "other",
+  "fee": -650,
+  "qualification": "mbbs",
+  "email": "kumar@gmail.com"
+}
+
+
+#api call for creating admin user
+###
+POST  http://127.0.0.1:8000/v2/admin-register/
+Content-Type: application/json
+
+{
+    "username":"test",
+    "email":"test@gmail.com",
+    "password":"test@123"
+}

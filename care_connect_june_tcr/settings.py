@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     "staff",
+    "staff_v2",
+    "bookings",
+    
 ]
 
 MIDDLEWARE = [
