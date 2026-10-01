@@ -83,3 +83,25 @@ Content-Type: application/json
     "email":"test@gmail.com",
     "password":"test@123"
 }
+
+
+# appointments api calls==================
+
+#api call for list all appointments
+###
+GET http://127.0.0.1:8000/appointments/
+Accept: application/json
+
+#api call for book an appointment
+###
+POST http://127.0.0.1:8000/appointments/
+Content-Type: application/json
+
+{
+    "patient_name":"hari",
+    "phone":5665777,
+    "doctor":2,
+    "appointment_date":"2026-10-2",
+    "problem":"weezing"
+
+}

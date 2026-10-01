@@ -19,6 +19,9 @@ from django.urls import path
 from staff.views import DoctorListCreateView
 from staff.views import DoctorRetrieveUpdateDeleteView
 from staff_v2 import views
+
+from bookings.views import AppointmentListCreateView
+
 urlpatterns = [
 
     path('admin/', admin.site.urls),
@@ -27,10 +30,12 @@ urlpatterns = [
 
     #v2 routes  
     path("v2/doctors/",views.DoctorListCreateView.as_view()),
-
     path("v2/doctors/<int:pk>/",views.DoctorRetrieveUpdateDeleteView.as_view()),
-
     path("v2/admin-register/",views.AdminCreateView.as_view()),
+
+    #appointment routes
+
+    path("appointments/",AppointmentListCreateView.as_view()),
 
 
     

@@ -1,10 +1,14 @@
 from django.db import models
 
+from staff.models import Doctor
+
 class Appointment(models.Model):
 
     patient_name = models.CharField(max_length=200)
 
     phone = models.CharField(max_length=15)
+
+    doctor = models.ForeignKey(Doctor,on_delete=models.CASCADE)
 
 
     appointment_date = models.DateField()
